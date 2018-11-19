@@ -6,7 +6,9 @@ Thanks：
   https://github.com/arkhipenko/TaskScheduler
   
 This is a more simpler task scheduler then TaskScheduler, and the most codes is copied frome TaskScheduler's codes.
+
 I have tested on ESP8266.
+
 It's designed for long Interval (>100 ms) tasks to schedule. Best not to used for a precise time controled programme.
 
 How to use:
@@ -28,9 +30,9 @@ How to use:
       
   3. Add the tasks to scheduler：
   
-      runner.addTask(t1,T_FOREVER); //the T_FOREVER is invocations，T_FOREVER means always running。
+      runner.addTask(t1,T_FOREVER);      //the T_FOREVER is invocations，T_FOREVER means always running。
       
-      runner.addTask(t1,100)；      //this run 100 times。
+      runner.addTask(t1,100)；           //this run 100 times。
       
   4. Executting the scheduler's execute() fun:
   
