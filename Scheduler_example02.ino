@@ -71,11 +71,11 @@ void t3Callback() {
 
 void t3OnStart(){
 	Serial.print("t3: ");
-    Serial.println("I'm start!");
+    Serial.println("I started in a good day!");
 }
 void t3OnStop(){
 	Serial.print("t3: ");
-    Serial.println("I will stop!");
+    Serial.println("OH,my god!");
 }
 
 
