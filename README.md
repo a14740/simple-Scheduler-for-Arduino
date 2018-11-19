@@ -49,7 +49,7 @@ How to use:
         
         runner.execute();
         
-        /*you can and a delay。timeNextIteration是下最先执行回调函数的 任务的最小时间，可以delay一下
+        /*you can add a delay。timeNextIteration是下最先执行回调函数的 任务的最小时间，可以delay一下
               
         if (runner.timeNextIteration<3) runner.timeNextIteration = 2;
         
