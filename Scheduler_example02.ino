@@ -11,14 +11,15 @@ Scheduler runner;
 void t1Callback();
 void t2Callback();
 void t3Callback(); 
-
+void t3OnStart();
+void t3OnStop();
 // Tasks
 Task t4();
 Task t1(2000, &t1Callback);  //adding task to the chain on creation
 
 Task t2(3000, &t2Callback);  //adding task to the chain on creation
 
-Task t3(5000, &t3Callback);
+Task t3(5000, &t3Callback,&t3OnStart,t3OnStop);
 
 // Test
 // Initially only tasks 1 and 2 are enabled
@@ -66,6 +67,18 @@ void t3Callback() {
     Serial.println(millis());
   
 }
+
+
+void t3OnStart(){
+	Serial.print("t3: ");
+    Serial.println("I'm start!");
+}
+void t3OnStop(){
+	Serial.print("t3: ");
+    Serial.println("I will stop!");
+}
+
+
 
 void setup () {
   Serial.begin(115200);
