@@ -28,11 +28,13 @@ How to use: （可以看看 Task和Scheduler类的属性成员，所有成员都
   
       Scheduler runner;
       
-  3. Add the tasks to scheduler：把任务加入调度器
+  3. Add the tasks to scheduler in setup() ：
+  把任务加入调度器，同时调度器会执行任务的iOnStart函数，如果有的话。removeTask时会执行该任务的iOnStop函数
   
       runner.addTask(t1,T_FOREVER);      //the T_FOREVER is invocations，T_FOREVER means always running。
       
-      runner.addTask(t1,100)；           //this run 100 times。执行完100次以后调度器执行removeTask.可以先判断Task.iRunCounter的值是否为零增加它或再addTask
+      runner.addTask(t1,100)；           //this run 100 times。
+      //执行完100次以后调度器执行removeTask.可以先判断Task.iRunCounter的值是否为零，然后增加它或再addTask
       
   4. Executting the scheduler's execute() fun:
   
